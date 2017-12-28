@@ -51,7 +51,7 @@
   opacity: 0.8;
 }
 .search .input:hover {
-  box-shadow: -2px 9px 24px -8px rgba(0,0,0,0.4);
+  box-shadow: -2px 6px 18px -8px rgba(0,0,0,0.4);
   opacity: 1;
 }
 .search .submit {
