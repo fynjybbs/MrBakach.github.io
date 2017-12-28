@@ -23,15 +23,7 @@
  	height: 92px;
  	
 }
-.logotext{
-	color: #4285f4;
-	font-family: roboto-regular, arial, sans-serif;
-	font-size: 16px;
-	padding-left: 235px;
-	margin-top: -17px;
-	
 
-}
 .search {
   width: 32%;
   position: relative;
@@ -42,23 +34,24 @@
 
 .search input {
   border: none;
+  padding: 5px 9px 0;
 }
 
 .search .input {
   
   width: 100%;
   height: 44px;
-  padding: 15px 37px 16px 15px;
+  padding: 0px 37px 0px 15px;
   background: #FFFFFF;
-  font: 16px, roboto-regular, Arial, sans-serif;
+  font: roboto-regular, Arial, sans-serif;
+  font-size: 16px;
   outline: none;
   border-radius: 2px;
   border: 1px solid #D6D6D6 ;
-  box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.4);
   opacity: 0.8;
 }
 .search .input:hover {
-  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.2), 0px 0px 0px 1px rgba(0,0,0,0.08);
+  box-shadow: -2px 4px 15px -10px rgba(0,0,0,0.4);
   opacity: 1;
 }
 .search .submit {
@@ -93,12 +86,14 @@ a.button {
   color: rgb(117,117,117);
   text-decoration: none;
   padding: .6em 1.2em;
+  margin: 1px;
   outline: none;
   border-radius: 2px;
   background: rgb(245,245,245);
   cursor:default;
 }
 a.button:hover {
+  margin: 0;
   color: rgb(0,0,0);
   border: 1px solid rgb(198,198,198);
   background: #f7f7f7;
@@ -164,7 +159,7 @@ a.topmenuright:hover{
   outline: none;
   border-radius: 2px;
   background: rgb(66,133,244);
-  cursor:default;
+  cursor:pointer;
 }
 footer{
   right: 0;
