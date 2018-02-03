@@ -2,11 +2,12 @@ var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
 var bak = [];
 var fire=[];
+var expl=[];
 var timer=0;
 var ship={x:300,y:300};
 
 var bakach = new Image();
-bakach.src = 'bakachhead.png';
+bakach.src = 'chudo.png';
 
 var fireimg = new Image();
 fireimg.src = 'drop01.png';
@@ -16,6 +17,9 @@ shipimg.src = 'ship01.png';
 
 var fon = new Image();
 fon.src = 'fon01.jpg';
+
+//var explimg = new Image();
+//explimg.src = 'chudo.png';
 
 canvas.addEventListener("mousemove", function(event){
 	ship.x=event.offsetX-25;
@@ -59,7 +63,13 @@ fire[i].x=fire[i].x+fire[i].dx;
 fire[i].y=fire[i].y+fire[i].dy;
 if (fire[i].y<-30) fire.splice(i,1);
 }
-
+//анимация взрывов
+for(i in expl){
+expl[i].animx=expl[i].animx+0.5;
+if (expl[i].animx>7) {expl[i].animy++;expl[i].animx=0}
+if (expl[i].animx>7)
+expl.splice(i,1);
+}
 	//физика
 for(i in bak){
 bak[i].x=bak[i].x+bak[i].dx;
@@ -72,7 +82,7 @@ bak[i].y=bak[i].y+bak[i].dy;
 
 		for(j in fire){
 			if(Math.abs(bak[i].x+25-fire[j].x-15)<50 && Math.abs(bak[i].y-fire[j].y)<25){
-				//expl.push({x:bak[i].x-25,y:bak[i].y-25,animx:0,animy:0});
+				expl.push({x:bak[i].x-25,y:bak[i].y-25,animx:0,animy:0});
 				bak[i].del=1;
 				fire.splice(j,1);break;
 			}
