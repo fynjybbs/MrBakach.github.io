@@ -16,7 +16,7 @@ var shipimg = new Image();
 shipimg.src = 'ship01.png';
 
 var fon = new Image();
-fon.src = 'fon01.jpg';
+fon.src = 'fon01.png';
 
 //var explimg = new Image();
 //explimg.src = 'chudo.png';
