@@ -16,6 +16,8 @@ shipimg.src = 'ship.png';
 
 var fon = new Image();
 fon.src = 'fon.png';
+var audioElement = document.getElementById("audio");
+audioElement.play();
 
 canvas.addEventListener("mousemove", function(event){
 	ship.x=event.offsetX-25;
